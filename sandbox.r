@@ -47,3 +47,9 @@ m <- as.matrix(matrix)
 v <- rowSums(m)
 tmp <- data.frame(word = names(v),freq=v)
 
+
+sample <- "The text didn't work like we thought-even though it should. But--why'd."
+resam <- removePunctuation(sample, preserve_intra_word_contractions = TRUE, 
+                           preserve_intra_word_dashes = TRUE)
+resam2 <- removePunctuation(sample, preserve_intra_word_contractions = FALSE, 
+                           preserve_intra_word_dashes = FALSE)
